@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="userForm" prefHeight="600.0" prefWidth="930.0" styleClass="cnt" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UsersCtrl">
+   <children>
+      <Label alignment="CENTER" layoutY="35.0" prefHeight="36.0" prefWidth="930.0" styleClass="itemTitle" text="Gestion des utilisateurs">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="220.0" prefHeight="26.0" styleClass="tableTitle" text="Liste des utilisateurs :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="327.0" layoutY="110.0" styleClass="searchpane">
+         <children>
+            <TextField fx:id="searchUserField" layoutX="8.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="250.0" promptText="Rechercher dans utilisateurs">
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </TextField>
+            <FontAwesomeIconView fx:id="searchUsercon" glyphName="SEARCH" layoutX="244.0" layoutY="-14.0" onMouseClicked="#searchUser" size="18" styleClass="searchicon" x="15.0" y="32.5" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+      <JFXButton fx:id="addUser" layoutX="717.0" layoutY="220.0" mnemonicParsing="false" onAction="#addUser" styleClass="addBtn" text="Ajouter un utilisateur">
+         <graphic>
+            <FontAwesomeIconView glyphName="PLUS" size="15" styleClass="addBtn" translateX="-3.0" translateY="1.0" x="5.0" y="35.0" />
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tableview" layoutX="40.0" layoutY="255.0" prefHeight="305.0" prefWidth="850.0">
+         <columns>
+            <TableColumn fx:id="colUserID" minWidth="0.0" text="ID Utilisateur" />
+            <TableColumn fx:id="colUserNom" text="Nom" />
+            <TableColumn fx:id="colUserPrenom" text="Prénom" />
+            <TableColumn fx:id="colUserTelephone" text="Téléphone" />
+            <TableColumn fx:id="colUsername" text="Nom d'utilisateur" />
+            <TableColumn fx:id="colAdmin" text="Admin" />
+            <TableColumn fx:id="colUserOption" text="Options">
+               <columns>
+                  <TableColumn fx:id="colUserEdit" text="Modifier" />
+                  <TableColumn fx:id="colUserDelete" text="Supprimer" />
+               </columns></TableColumn>
+         </columns>
+      </TableView>
+      <JFXButton fx:id="refreshProd" layoutX="600.0" layoutY="220.0" mnemonicParsing="false" onAction="#refreshUserTable" styleClass="refreshBtn" text=" Actualiser">
+         <graphic>
+            <OctIconView glyphName="SYNC" size="16" styleClass="refreshBtn" />
+         </graphic>
+      </JFXButton>
+      <JFXRadioButton fx:id="allUsersRadio" layoutX="298.0" layoutY="150.0" mnemonicParsing="false" prefWidth="7.0" text="Tout" />
+      <JFXRadioButton fx:id="adminRadio" layoutX="378.0" layoutY="150.0" mnemonicParsing="false" text="Administrateur" />
+      <JFXRadioButton fx:id="userRadio" layoutX="526.0" layoutY="150.0" mnemonicParsing="false" text="Utilisateur" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="container" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../Style/Dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DashbordCtrl">
+   <children>
+      <AnchorPane fx:id="content" layoutX="170.0" prefHeight="600.0" prefWidth="930.0" style="-fx-background-color: white;" styleClass="content">
+         <children>
+            <Label fx:id="welcomeLabel" alignment="CENTER" layoutY="70.0" prefHeight="150.0" prefWidth="930.0" text="Bienvenue Username" textFill="#1589ff">
+               <font>
+                  <Font size="48.0" />
+               </font></Label>
+         </children></AnchorPane>
+      <Label fx:id="istorepane" alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="170.0" style="-fx-background-color: #1569C7;" text="iStore" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <Pane fx:id="menu" layoutY="70.0" prefHeight="530.0" prefWidth="170.0" style="-fx-background-color: #1589FF;" styleClass="dashmenu" stylesheets="@../Style/DashMenu.css">
+         <children>
+            <Pane fx:id="stockpane" onMouseClicked="#menuChange" prefHeight="50.0" prefWidth="170.0" styleClass="elements">
+               <children>
+                  <Label fx:id="stocklabel" contentDisplay="CENTER" layoutX="55.0" prefHeight="50.0" prefWidth="115.0" styleClass="element" text="Stock">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <FontAwesomeIconView fx:id="stockicon" glyphName="SHOPPING_CART" size="22" styleClass="element" x="15.0" y="32.5" />
+               </children>
+            </Pane>
+            <Pane fx:id="creditpane" layoutY="50.0" onMouseClicked="#menuChange" prefHeight="50.0" prefWidth="170.0" styleClass="elements">
+               <children>
+                  <FontAwesomeIconView glyphName="BOOK" size="22" styleClass="element" x="15.0" y="32.5" />
+                  <Label contentDisplay="CENTER" layoutX="55.0" prefHeight="50.0" prefWidth="115.0" styleClass="element" text="Crédit">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            <Pane fx:id="clientspane" layoutY="100.0" onMouseClicked="#menuChange" prefHeight="50.0" prefWidth="170.0" styleClass="elements">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="55.0" prefHeight="50.0" prefWidth="115.0" styleClass="element" text="Clients">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <FontAwesomeIconView glyphName="USERS" size="22" styleClass="element" x="15.0" y="32.5" />
+               </children>
+            </Pane>
+            <Pane fx:id="comptepane" layoutY="150.0" onMouseClicked="#menuChange" prefHeight="50.0" prefWidth="170.0" styleClass="elements">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="55.0" prefHeight="50.0" prefWidth="115.0" styleClass="element" text="Mon compte">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <FontAwesomeIconView glyphName="USER" layoutX="3.0" size="22" styleClass="element" x="15.0" y="32.5" />
+               </children>
+            </Pane>
+            <Pane fx:id="userspane" layoutY="200.0" onMouseClicked="#menuChange" prefHeight="50.0" prefWidth="170.0" styleClass="elements">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="55.0" prefHeight="50.0" prefWidth="115.0" styleClass="element" text="Utilisateurs">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="COGS" size="22" styleClass="element" x="15.0" y="32.5" />
+                  <Line endX="100.0" fill="#818181" layoutY="50.0" scaleY="0.5" startX="65.0" stroke="#1569c7" strokeLineCap="ROUND" />
+               </children>
+            </Pane>
+            <Pane fx:id="propospane" layoutY="470.0" onMouseClicked="#menuChange" prefHeight="30.0" prefWidth="170.0" styleClass="signoutlabel">
+               <children>
+                  <FontAwesomeIconView glyphName="INFO_CIRCLE" size="14" styleClass="signout" x="20.0" y="20.0" />
+                  <Hyperlink layoutX="40.0" onAction="#showPropos" prefHeight="30.0" prefWidth="130.0" snapToPixel="false" styleClass="signout" text="À propos" textFill="#818181" />
+               </children>
+            </Pane>
+            <Pane fx:id="logoutpane" layoutY="500.0" prefHeight="30.0" prefWidth="170.0" styleClass="signoutlabel">
+               <children>
+                  <FontAwesomeIconView glyphName="SIGN_OUT" size="14" styleClass="signout" x="20.0" y="20.0" />
+                  <Hyperlink layoutX="40.0" onAction="#handleClose" prefHeight="30.0" prefWidth="130.0" snapToPixel="false" styleClass="signout" text="Déconnecter" textFill="#818181" />
+               </children>
+            </Pane>
+            <Line endX="100.0" fill="#818181" layoutY="150.5" scaleY="0.5" startX="65.0" stroke="#1569c7" strokeLineCap="ROUND" />
+            <Line endX="100.0" fill="#cccccc" layoutY="50.5" rotate="-0.0" scaleY="0.5" startX="65.0" stroke="#1569c7" strokeLineCap="ROUND" />
+            <Line endX="100.0" fill="#818181" layoutY="100.5" scaleY="0.5" startX="65.0" stroke="#1569c7" strokeLineCap="ROUND" />
+            <Line endX="100.0" fill="#818181" layoutY="200.5" scaleY="0.5" startX="65.0" stroke="#1569c7" strokeLineCap="ROUND" />
+         </children></Pane>
+   </children>
+</AnchorPane>

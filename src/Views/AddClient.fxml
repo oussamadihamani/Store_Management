@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="form" prefHeight="670.0" prefWidth="300.0" styleClass="add-edit" stylesheets="@../Style/PopupWindow.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddClientCtrl">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="450.0" style="-fx-background-color: #1589FF;">
+         <children>
+            <Label layoutX="20.0" layoutY="35.0" text="Ajouter un nouveau client" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="searchUsercon" fill="WHITE" glyphName="USER_PLUS" layoutX="375.0" layoutY="29.0" size="35" styleClass="searchicon" x="15.0" y="32.5" />
+         </children></Pane>
+      <JFXTextField fx:id="txtNom" focusColor="#1569c7" layoutX="245.0" layoutY="203.0" prefWidth="155.0" promptText="Nom" unFocusColor="#1589ff" />
+      <JFXTextField fx:id="txtPrenom" focusColor="#1569c7" layoutX="242.0" layoutY="313.0" prefWidth="155.0" promptText="Prénom" unFocusColor="#1589ff" />
+      <JFXTextField fx:id="txtTelephone" focusColor="#1569c7" layoutX="245.0" layoutY="423.0" prefWidth="155.0" promptText="Numéro de téléphone" unFocusColor="#1589ff" />
+      <Label layoutX="30.0" layoutY="205.0" text="Nom :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="110.0" text="(*) Champ Obligatoire" textFill="#eb3730">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="80.0" layoutY="210.0" size="6" styleClass="required" />
+      <Label layoutX="30.0" layoutY="315.0" text="Prénom :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="425.0" text="Téléphone :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="100.0" layoutY="320.0" size="6" styleClass="required" />
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="120.0" layoutY="430.0" size="6" styleClass="required" />
+      <JFXTextField fx:id="txtAmount" focusColor="#1569c7" layoutX="245.0" layoutY="533.0" prefWidth="155.0" promptText="Montant" unFocusColor="#1589ff" />
+      <Label disable="true" layoutX="380.0" layoutY="535.0" text="Da">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="535.0" text="Montant :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="resetFormBtn" layoutX="20.0" layoutY="625.0" mnemonicParsing="false" onAction="#actionPerformed" styleClass="resetBtn" text=" Réinitialiser Formulaire">
+         <graphic>
+            <OctIconView glyphName="SYNC" size="15" styleClass="resetBtn" />
+         </graphic></JFXButton>
+      <JFXButton fx:id="cancelBtn" layoutX="230.5" layoutY="625.0" mnemonicParsing="false" onAction="#actionPerformed" styleClass="CancelBtn" text=" Annuler">
+         <graphic>
+            <FontAwesomeIconView glyphName="TIMES" size="15" styleClass="CancelBtn" />
+         </graphic></JFXButton>
+      <JFXButton fx:id="addBtn" layoutX="341.0" layoutY="625.0" mnemonicParsing="false" onAction="#addNewClient" prefWidth="89.0" styleClass="addBtn" text=" Valider">
+         <graphic>
+            <OctIconView glyphName="CHECK" size="15" styleClass="resetBtn" />
+         </graphic></JFXButton>
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="105.0" layoutY="540.0" size="6" styleClass="required" />
+   </children>
+</AnchorPane>

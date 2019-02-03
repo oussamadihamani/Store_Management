@@ -1,0 +1,118 @@
+.content .cnt {
+    -fx-background-color: white;
+}
+
+.tableTitle {
+    -fx-text-fill: #1569C7;
+}
+
+.addBtn {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-cursor: hand;
+}
+
+.addBtn:hover {
+    -fx-background-color: #41A317;
+}
+
+.searchpane {
+    -fx-border-width: 0.3 0.3 0.3 7px;
+    -fx-border-color:  #1569C7;
+    -fx-background-color: white;
+}
+
+.searchpane .searchicon {
+    -fx-fill: #1569C7;
+    -fx-cursor: hand;
+}
+
+.searchpane .searchicon:hover {
+    -fx-fill: steelblue;
+}
+
+
+.text-field {
+    -fx-border-radius: 0;
+    -fx-text-box-border: transparent;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.table-column {
+    -fx-alignment: center;
+}
+
+.table-row-cell:selected, .table-row-cell:odd:selected {
+    -fx-background-color: steelblue;
+}
+
+.table-row-cell{
+    -fx-background-color: white;
+    -fx-font-size:13px;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: #E4E4E4;
+    -fx-font-size:13px;
+}
+
+
+.refreshBtn, .searchBtn {
+    -fx-background-color: steelblue;
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-cursor: hand;
+}
+
+.refreshBtn:hover, .searchBtn:hover {
+    -fx-background-color: #1569C7;
+}
+
+.editIcon {
+    -fx-font-family:"FontAwesome";
+    -fx-text-fill: orange;
+    -fx-font-size: 1.3em;
+    -fx-cursor: hand;
+}
+
+.deleteIcon {
+    -fx-font-family:"FontAwesome";
+    -fx-text-fill: #eb3730;
+    -fx-font-size: 1.3em;
+    -fx-cursor: hand;
+}
+
+.cancelBtn:hover {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+.confirmBtn:hover {
+    -fx-background-color: #41A317;
+    -fx-text-fill: white;
+}
+
+.radio-button {
+    -jfx-selected-color: #1589ff;
+    -jfx-unselected-color: #1569c7;
+}
+
+.hyperlink {
+    -fx-border-color: transparent;
+    -fx-text-fill: steelblue;
+}
+
+.hyperlink:hover {
+    -fx-border-color: transparent;
+    -fx-text-fill: #1589ff;
+}
+
+
+.jfx-date-picker .input-line {
+    -fx-background-color: #1589ff;
+}
+.jfx-date-picker .input-focused-line {
+    -fx-background-color: #1569c7;
+}

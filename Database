@@ -1,0 +1,47 @@
+create database gestionstore;
+
+use gestionstore;
+
+SET GLOBAL time_zone = '+1:00';
+
+drop table if exists User;
+drop table if exists Client;
+drop table if exists Product;
+drop table if exists Operation;
+
+create table User (userID int(2) auto_increment, userNom varchar(30) not null, userPrenom varchar(30) not null, userTelephone varchar(20) not null unique, username varchar(20) BINARY not null unique default 'admin', userPassword varchar(30) BINARY not null default 'admin', admin boolean not null default false, primary key(userID), unique(userNom, userPrenom) );
+
+insert into User (userNom, userPrenom, userTelephone, username, userPassword, admin) 
+values ('Oussama', 'Mohamed', '0772466456', 'Hamani', 'ouss93', true), ('Amine', 'Khalil', '0667948483', 'Amine', 'khalil02', false);
+
+create table Client (clientID int(4) auto_increment, clientNom varchar(30) not null, clientPrenom varchar(30) not null, clientTelephone varchar(20) not null unique, clientAmount int unsigned not null default 0, primary key(clientID), unique (clientNom, clientPrenom));
+
+insert into Client (clientNom, clientPrenom, clientTelephone) values ('Mohamed', 'Oussama', '0777777777'),
+('Ali', 'Ahmed', '0555224248'), ('Aymen', 'Mehdi', '0665887942'), ('Imen', 'Sobhi', '0770747851');
+
+create table Product (productID int(4) auto_increment, productType varchar(30) not null, productMarque varchar(30) not null, nombrePiece int(2) unsigned not null check (nombrepiece > 0), productPrice int unsigned not null check (productPrice > 0), productQuantity int(3) unsigned not null, primary key (productID), unique (productType, productMarque, nombrePiece));
+
+insert into Product (productType, productMarque, nombrePiece, productPrice, productQuantity) values 
+('pillow', 'paris', 2, 1200, 20), ('pillow', 'soufia', 2, 1000, 15), ('bed sheet', 'paris', 5, 2000, 30),
+('bed sheet', 'paris', 3, 1200, 10), ('bed sheet', 'soufia', 3, 1200, 10), ('pillow', 'soufia', 4, 2200, 20);
+
+create table Operation (operationID int auto_increment, operationType char(10) not null, operationAmount int unsigned not null, operationDate Datetime not null default now(), operationClient int(4) not null, operationUser int(2) not null, operationUsername varchar(20) not null, primary key(operationID), foreign key(operationClient) references Client(clientID) on update cascade on delete cascade, foreign key (operationUser) references User(userID) on update cascade);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

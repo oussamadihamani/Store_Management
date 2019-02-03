@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="creditForm" prefHeight="600.0" prefWidth="930.0" styleClass="cnt" stylesheets="@../Style/Dashboard.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CreditCtrl">
+   <children>
+      <Label alignment="CENTER" layoutY="35.0" prefHeight="36.0" prefWidth="930.0" styleClass="itemTitle" text="Gestion du Crédit">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="220.0" prefHeight="26.0" styleClass="tableTitle" text="Liste de crédit :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableview" layoutX="40.0" layoutY="255.0" prefHeight="305.0" prefWidth="850.0">
+         <columns>
+            <TableColumn fx:id="colClientID" minWidth="0.0" text="ID Client" />
+            <TableColumn fx:id="colClientNom" text="Nom" />
+            <TableColumn fx:id="colClientPrenom" text="Prénom" />
+            <TableColumn fx:id="colClientAmount" text="Montant" />
+            <TableColumn fx:id="colCrediter" text="Créditer" />
+            <TableColumn fx:id="colDebiter" text="Débiter" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="refreshCredit" layoutX="780.0" layoutY="220.0" mnemonicParsing="false" onAction="#refreshCreditTable" styleClass="refreshBtn" text=" Actualiser">
+         <graphic>
+            <OctIconView glyphName="SYNC" size="16" styleClass="refreshBtn" />
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="searchAmountCombo" focusColor="#1569c7" layoutX="380.0" layoutY="141.0" minHeight="0.0" minWidth="0.0" prefWidth="70.0" styleClass="searchCombo" unFocusColor="#1589ff" />
+      <JFXTextField fx:id="searchClientTxt" focusColor="#1569c7" layoutX="220.0" layoutY="143.0" prefWidth="120.0" promptText=" Client" unFocusColor="#1589ff" />
+      <JFXTextField fx:id="searchAmountTxt" focusColor="#1569c7" layoutX="450.0" layoutY="143.0" prefWidth="100.0" promptText=" Somme" unFocusColor="#1589ff" />
+      <JFXButton layoutX="590.0" layoutY="142.0" mnemonicParsing="false" onAction="#searchCredit" styleClass="searchBtn" text=" Rechercher">
+         <graphic>
+            <FontAwesomeIconView fx:id="searchProductIcon" glyphName="SEARCH" size="15" styleClass="searchBtn" x="15.0" y="32.5" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

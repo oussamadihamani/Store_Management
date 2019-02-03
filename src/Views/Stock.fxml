@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="stockForm" prefHeight="600.0" prefWidth="930.0" styleClass="cnt" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StockCtrl">
+   <children>
+      <Label alignment="CENTER" layoutY="35.0" prefWidth="930.0" styleClass="itemTitle" text="Gestion du Stock">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="220.0" prefHeight="26.0" styleClass="tableTitle" text="Liste de Produits :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="addProduct" layoutX="737.0" layoutY="220.0" mnemonicParsing="false" onAction="#addProduct" styleClass="addBtn" text="Ajouter un Produit">
+         <graphic>
+            <FontAwesomeIconView glyphName="PLUS" size="15" styleClass="addBtn" translateX="-3.0" translateY="1.0" x="5.0" y="35.0" />
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tableview" layoutX="40.0" layoutY="255.0" prefHeight="305.0" prefWidth="850.0">
+         <columns>
+            <TableColumn fx:id="colProductID" minWidth="0.0" text="ID Produit" />
+            <TableColumn fx:id="colProductType" text="Produit" />
+            <TableColumn fx:id="colProductMarque" text="Marque" />
+            <TableColumn fx:id="colPieces" text="N. Pièces" />
+            <TableColumn fx:id="colProductPrice" text="Prix" />
+            <TableColumn fx:id="colProductQuantity" text="Quantité" />
+            <TableColumn fx:id="colProductOption" text="Options">
+               <columns>
+                  <TableColumn fx:id="colProductEdit" text="Modifier" />
+                  <TableColumn fx:id="colProductDelete" text="Supprimer" />
+               </columns></TableColumn>
+         </columns>
+      </TableView>
+      <JFXButton fx:id="refreshProd" layoutX="620.0" layoutY="220.0" mnemonicParsing="false" onAction="#refreshProductTable" styleClass="refreshBtn" text=" Actualiser">
+         <graphic>
+            <OctIconView glyphName="SYNC" onMouseClicked="#refreshProductTable" size="15" styleClass="refreshBtn" />
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="searchTypeCombo" focusColor="#1569c7" layoutX="40.0" layoutY="131.0" minHeight="26.0" prefWidth="90.0" promptText=" Type" styleClass="searchCombo" unFocusColor="#1589ff" />
+      <JFXComboBox fx:id="searchMarqueCombo" focusColor="#1569c7" layoutX="160.0" layoutY="131.0" minHeight="26.0" prefWidth="90.0" promptText=" Marque" styleClass="searchCombo" unFocusColor="#1589ff" />
+      <JFXComboBox fx:id="searchPiecesCombo" focusColor="#1569c7" layoutX="280.0" layoutY="131.0" minHeight="26.0" prefWidth="90.0" promptText=" Pièces" styleClass="searchCombo" unFocusColor="#1589ff" />
+      <JFXComboBox fx:id="searchPriceCombo" focusColor="#1569c7" layoutX="400.0" layoutY="130.0" minHeight="0.0" minWidth="0.0" prefWidth="70.0" styleClass="searchCombo" unFocusColor="#1589ff" />
+      <JFXComboBox fx:id="searchQuantityCombo" focusColor="#1569c7" layoutX="590.0" layoutY="130.0" minHeight="0.0" minWidth="0.0" prefWidth="70.0" styleClass="searchCombo" unFocusColor="#1589ff" />
+      <JFXTextField fx:id="searchPriceTxt" focusColor="#1569c7" layoutX="470.0" layoutY="132.0" prefWidth="90.0" promptText=" Prix" unFocusColor="#1589ff" />
+      <JFXTextField fx:id="searchQuantityTxt" focusColor="#1569c7" layoutX="660.0" layoutY="132.0" prefWidth="90.0" promptText=" Quantité" unFocusColor="#1589ff" />
+      <JFXButton layoutX="775.0" layoutY="132.0" mnemonicParsing="false" onAction="#searchProduct" styleClass="searchBtn" text=" Rechercher">
+         <graphic>
+            <FontAwesomeIconView fx:id="searchProductIcon" glyphName="SEARCH" size="15" styleClass="searchBtn" x="15.0" y="32.5" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

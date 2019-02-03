@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="930.0" styleClass="cnt" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CompteCtrl">
+   <children>
+      <Label alignment="CENTER" layoutY="35.0" prefWidth="930.0" styleClass="itemTitle" text="Mon Compte">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="180.0" text="Nom :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="250.0" text="Prénom :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="319.0" text="Téléphone :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="390.0" text="Nom d'utilisateur :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="searchUsercon" disable="true" glyphName="USER" layoutX="235.0" layoutY="163.0" opacity="0.5" size="20" styleClass="searchicon" x="15.0" y="32.5" />
+      <FontAwesomeIconView fx:id="searchUsercon1" disable="true" glyphName="USER" layoutX="235.0" layoutY="233.0" opacity="0.5" size="20" styleClass="searchicon" x="15.0" y="32.5" />
+      <FontAwesomeIconView fx:id="searchUsercon11" disable="true" glyphName="PHONE" layoutX="235.0" layoutY="303.0" opacity="0.5" size="20" styleClass="searchicon" x="15.0" y="32.5" />
+      <FontAwesomeIconView fx:id="searchUsercon111" disable="true" glyphName="USER_SECRET" layoutX="235.0" layoutY="373.0" opacity="0.5" size="20" styleClass="searchicon" x="15.0" y="32.5" />
+      <Label fx:id="txtNom" layoutX="566.0" layoutY="180.0" text="Nom">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtPrenom" layoutX="566.0" layoutY="250.0" text="Prénom">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtTelephone" layoutX="566.0" layoutY="319.0" text="Téléphone">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtUsername" layoutX="566.0" layoutY="390.0" text="Nom d'utilisateur">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="personalInfos" layoutX="236.0" layoutY="536.0" onAction="#actionPerformed" text="Changer mes Information" textFill="STEELBLUE" />
+      <Hyperlink fx:id="passwordEdit" layoutX="539.0" layoutY="536.0" onAction="#actionPerformed" stylesheets="@../Style/DashMenu.css" text="Changer Mot de passe" />
+   </children>
+</AnchorPane>

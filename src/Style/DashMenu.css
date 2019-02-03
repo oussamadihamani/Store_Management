@@ -1,0 +1,44 @@
+.signout {
+    -fx-fill: #818181;
+    -fx-text-fill: #818181;
+    -fx-border-color: transparent;
+}
+
+.signoutlabel:hover .signout {
+    -fx-fill: white;
+    -fx-text-fill: white;
+    -fx-text-decoration: underline;
+}
+
+.element {
+    -fx-fill: white;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.elements:hover {
+    -fx-border-width: 0 0 0 6px;
+    -fx-border-color:  #1569C7;
+    -fx-background-color: white;
+}
+
+.dashmenu .elements:hover .element {
+    -fx-fill:  #1589FF;
+    -fx-text-fill:  #1589FF;
+}
+
+.active {
+    -fx-border-width: 0 0 0 6px;
+    -fx-border-color:  #1569C7;
+    -fx-background-color: white;
+}
+
+.active .element {
+    -fx-fill: #1589FF;
+    -fx-text-fill: #1589FF;
+}
+
+.dashmenu .pane:hover  {
+    -fx-border-width: 0 0 0 6px;
+    -fx-border-color:  #1569C7;
+}

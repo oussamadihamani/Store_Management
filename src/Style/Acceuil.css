@@ -1,0 +1,51 @@
+.password-field {
+    -fx-background-radius: 0, 0;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    //-fx-prompt-text-fill: #818181;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+.text-field {
+    -fx-background-radius: 0, 0;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    //-fx-prompt-text-fill: #c77416;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-background-color: white;
+    -fx-font-size: 13px;
+    -fx-text-fill: #c77416;
+    -fx-border-color: transparent;
+}
+
+.button:hover .loginicon, .button:hover{
+    -fx-fill: #c77416;;
+    -fx-text-fill: #c77416;;
+}
+/*
+.button:pressed, .button:pressed .loginicon {
+    -fx-fill: white;
+    -fx-background-color: #c77416;
+    -fx-text-fill: white;
+}
+*/
+.signout {
+    -fx-fill: #c77416;
+    -fx-text-fill: #c77416;
+    -fx-border-color: transparent;
+}
+
+.signoutlabel:hover .signout {
+    -fx-fill: white;
+    -fx-text-fill: white;
+    -fx-text-decoration: underline;
+}

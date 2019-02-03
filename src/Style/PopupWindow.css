@@ -1,0 +1,47 @@
+.add-edit {
+    -fx-background-color: white;
+}
+
+.text-field {
+    -fx-text-fill: black;
+}
+
+.required {
+    -fx-fill: #eb3730;
+}
+
+
+.resetBtn {
+    -fx-background-color: orange;
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-cursor: hand;
+}
+
+.resetBtn:hover {
+    -fx-background-color: #FFD700;
+}
+
+
+.CancelBtn {
+    -fx-background-color: #F62817;
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-cursor: hand;
+}
+
+.CancelBtn:hover {
+    -fx-background-color: red;
+}
+
+
+.addBtn {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-cursor: hand;
+}
+
+.addBtn:hover {
+    -fx-background-color: #41A317;
+}

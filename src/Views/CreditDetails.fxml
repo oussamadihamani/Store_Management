@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="creditForm" prefHeight="500.0" prefWidth="750.0" styleClass="cnt" stylesheets="@../Style/Dashboard.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CreditDetailsCtrl">
+   <children>
+      <Label fx:id="creditInfosLabel" alignment="CENTER" layoutY="25.0" prefHeight="36.0" prefWidth="750.0" styleClass="itemTitle" textFill="#1569c7">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableview" layoutX="40.0" layoutY="175.0" prefHeight="285.0" prefWidth="670.0">
+         <columns>
+            <TableColumn fx:id="colOperationType" prefWidth="153.0" text="Type d'opération" />
+            <TableColumn fx:id="colOperationAmount" minWidth="7.0" prefWidth="81.0" text="Somme" />
+            <TableColumn fx:id="colOperationDate" prefWidth="108.0" text="Date" />
+            <TableColumn fx:id="colOperationTime" prefWidth="135.0" text="Temps" />
+            <TableColumn fx:id="colOperationUser" prefWidth="135.0" text="Utilisateur" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="584.0" layoutY="90.0" mnemonicParsing="false" onAction="#searchCredit" prefWidth="118.0" styleClass="searchBtn" text=" Rechercher">
+         <graphic>
+            <FontAwesomeIconView fx:id="searchProductIcon" glyphName="SEARCH" size="15" styleClass="searchBtn" x="15.0" y="32.5" />
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="searchTypeCombo" focusColor="#1569c7" layoutX="40.0" layoutY="90.0" minHeight="0.0" minWidth="0.0" prefWidth="135.0" promptText=" Type d'opération" styleClass="searchCombo" unFocusColor="#1589ff" />
+      <JFXButton fx:id="refreshCredit" layoutX="584.0" layoutY="139.0" mnemonicParsing="false" onAction="#refreshCreditTable" prefHeight="26.0" prefWidth="118.0" styleClass="refreshBtn" text=" Actualiser">
+         <graphic>
+            <OctIconView glyphName="SYNC" size="16" styleClass="refreshBtn" />
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="searchUserTxt" focusColor="#1569c7" layoutX="415.0" layoutY="92.0" prefWidth="135.0" promptText=" Utilisateur" unFocusColor="#1589ff" />
+      <JFXDatePicker fx:id="searchDateTxt" defaultColor="#1589ff" layoutX="225.0" layoutY="88.0" prefWidth="150.0" promptText=" Date" />
+   </children>
+</AnchorPane>

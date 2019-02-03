@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="form" prefHeight="670.0" prefWidth="300.0" styleClass="add-edit" stylesheets="@../Style/PopupWindow.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddProductCtrl">
+   <children>
+      <JFXButton fx:id="resetFormBtn" layoutX="20.0" layoutY="615.0" mnemonicParsing="false" onAction="#actionPerformed" styleClass="resetBtn" text=" Réinitialiser Formulaire">
+         <graphic>
+            <OctIconView glyphName="SYNC" size="15" styleClass="resetBtn" />
+         </graphic></JFXButton>
+      <Label layoutX="30.0" layoutY="175.0" text="Type :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="80.0" layoutY="180.0" size="6" styleClass="required" />
+      <Label layoutX="30.0" layoutY="265.0" text="Marque :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="100.0" layoutY="270.0" size="6" styleClass="required" />
+      <Label layoutX="30.0" layoutY="355.0" text="Nombre de pièces :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtProductPieces" focusColor="#1569c7" layoutX="245.0" layoutY="355.0" promptText="Nombre de pièces" unFocusColor="#1589ff" />
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="185.0" layoutY="360.0" size="6" styleClass="required" />
+      <Label layoutX="30.0" layoutY="445.0" text="Prix :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtProductPrice" focusColor="#1569c7" layoutX="245.0" layoutY="445.0" promptText="Prix de vente" unFocusColor="#1589ff" />
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="75.0" layoutY="450.0" size="6" styleClass="required" />
+      <Label layoutX="30.0" layoutY="535.0" text="Quantité  :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtProductQuanity" focusColor="#1569c7" layoutX="245.0" layoutY="535.0" promptText="Quantité Disponible" unFocusColor="#1589ff" />
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="115.0" layoutY="540.0" size="6" styleClass="required" />
+      <JFXButton fx:id="cancelBtn" layoutX="230.5" layoutY="615.0" mnemonicParsing="false" onAction="#actionPerformed" styleClass="CancelBtn" text=" Annuler">
+         <graphic>
+            <FontAwesomeIconView glyphName="TIMES" size="15" styleClass="CancelBtn" />
+         </graphic></JFXButton>
+      <JFXButton fx:id="addBtn" layoutX="341.0" layoutY="615.0" mnemonicParsing="false" onAction="#addNewProduct" prefWidth="89.0" styleClass="addBtn" text=" Valider">
+         <graphic>
+            <OctIconView glyphName="CHECK" size="15" styleClass="resetBtn" />
+         </graphic></JFXButton>
+      <Label disable="true" layoutX="382.0" layoutY="449.0" text="Da" />
+      <Pane prefHeight="100.0" prefWidth="450.0" style="-fx-background-color: #1589FF;">
+         <children>
+            <Label layoutX="20.0" layoutY="35.0" text="Ajouter un nouveau produit" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <OctIconView glyphName="PACKAGE" layoutX="390.0" layoutY="58.0" size="35" styleClass="resetBtn" />
+         </children></Pane>
+      <Label layoutX="30.0" layoutY="110.0" text="(*) Champ Obligatoire" textFill="#eb3730">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="txtProductType" focusColor="#1569c7" layoutX="245.0" layoutY="172.0" prefWidth="155.0" unFocusColor="#1589ff" />
+      <JFXComboBox fx:id="txtProductMarque" focusColor="#1569c7" layoutX="245.0" layoutY="262.0" prefWidth="155.0" unFocusColor="#1589ff" />
+   </children>
+</AnchorPane>

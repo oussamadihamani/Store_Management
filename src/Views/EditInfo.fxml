@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="form" prefHeight="670.0" prefWidth="300.0" styleClass="add-edit" stylesheets="@../Style/PopupWindow.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EditInfoCtrl">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="450.0" style="-fx-background-color: #1589FF;">
+         <children>
+            <Label layoutX="20.0" layoutY="35.0" text="Changer mes informations" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="searchUsercon" fill="WHITE" glyphName="EDIT" layoutX="375.0" layoutY="29.0" size="35" styleClass="searchicon" x="15.0" y="32.5" />
+         </children></Pane>
+      <JFXTextField fx:id="txtNom" focusColor="#1569c7" layoutX="245.0" layoutY="195.0" prefWidth="155.0" promptText="Nom" unFocusColor="#1589ff" />
+      <JFXTextField fx:id="txtPrenom" focusColor="#1569c7" layoutX="245.0" layoutY="295.0" prefWidth="155.0" promptText="Prénom" unFocusColor="#1589ff" />
+      <JFXTextField fx:id="txtTelephone" focusColor="#1569c7" layoutX="245.0" layoutY="395.0" prefWidth="155.0" promptText="Numéro de téléphone" unFocusColor="#1589ff" />
+      <JFXTextField fx:id="txtUsername" focusColor="#1569c7" layoutX="245.0" layoutY="495.0" prefWidth="155.0" promptText="Nom d'utilisateur" unFocusColor="#1589ff" />
+      <JFXButton fx:id="cancelBtn" layoutX="120.0" layoutY="625.0" mnemonicParsing="false" onAction="#cancelEdit" styleClass="CancelBtn" text=" Annuler">
+         <graphic>
+            <FontAwesomeIconView glyphName="TIMES" size="15" styleClass="CancelBtn" />
+         </graphic></JFXButton>
+      <JFXButton fx:id="confirmBtn" layoutX="241.0" layoutY="625.0" mnemonicParsing="false" onAction="#editInfo" prefWidth="89.0" styleClass="addBtn" text=" Valider">
+         <graphic>
+            <OctIconView glyphName="CHECK" size="15" styleClass="resetBtn" />
+         </graphic></JFXButton>
+      <Label layoutX="30.0" layoutY="195.0" text="Nom :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="110.0" text="(*) Champ Obligatoire" textFill="#eb3730">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="80.0" layoutY="200.0" size="6" styleClass="required" />
+      <Label layoutX="30.0" layoutY="295.0" text="Prénom :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="395.0" text="Téléphone :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="100.0" layoutY="300.0" size="6" styleClass="required" />
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="120.0" layoutY="400.0" size="6" styleClass="required" />
+      <Label layoutX="30.0" layoutY="495.0" text="Nom d'utilisateur :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="ASTERISK" layoutX="170.0" layoutY="500.0" size="6" styleClass="required" />
+   </children>
+</AnchorPane>
